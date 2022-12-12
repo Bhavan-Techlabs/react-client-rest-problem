@@ -1,0 +1,28 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.header-section,
+.footer-section {
+  display: flex;
+  justify-content: center;
+}
+
+.header-section h1 {
+  color: azure;
+}
+
+.footer-section {
+  background: transparent;
+}
+
+.user-form {
+  padding: 20px;
+}
