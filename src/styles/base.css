@@ -26,3 +26,24 @@ body {
 .user-form {
   padding: 20px;
 }
+
+.user-card {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: chartreuse;
+  padding: 10px;
+}
+
+.user-card:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.user-list-wrapper {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+}
