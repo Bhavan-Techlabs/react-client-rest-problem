@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import User from "../components/User";
+import UserForm from "../components/UserForm";
 
 const UserPage = () => {
   const [user, setUser] = useState();
@@ -19,8 +20,11 @@ const UserPage = () => {
 
   return (
     <>
-      <h1>User Page</h1>
-      {user && <User user={user} />}
+      <div className="user-page-wrapper">
+        <h1>User Page</h1>
+        {user && <User user={user} />}
+        {user && <UserForm user={user} />}
+      </div>
     </>
   );
 };
