@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import UserPage from "./pages/UserPage";
 
 import "./styles/base.css";
 
@@ -9,6 +10,8 @@ export default function App() {
     <Routes>
       <Route path="/">
         <Route path="/" element={<UsersListPage />} />
+        <Route path="/users/:id" element={<UserPage />} />
+
         {/* TODO: implement user details page route. */}
       </Route>
     </Routes>

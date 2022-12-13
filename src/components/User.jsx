@@ -2,6 +2,7 @@
 // You can edit this file if you want
 
 import { useNavigate } from "react-router-dom";
+import "../styles/base.css";
 
 function User({ user }) {
   const navigate = useNavigate();
@@ -14,8 +15,8 @@ function User({ user }) {
       }}
     >
       <img loading="lazy" alt={user.name} src={user.avatar} />
-      <h1>{user.name}</h1>
-      <p>{user.address}</p>
+      <h1 className="user-name">{user.name}</h1>
+      <p className="user-address">{user.address}</p>
     </div>
   );
 }
