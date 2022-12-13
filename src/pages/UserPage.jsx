@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import User from "../components/User";
 
 const UserPage = () => {
   const [user, setUser] = useState();
@@ -10,19 +11,16 @@ const UserPage = () => {
   useEffect(() => {
     if (userId && users) {
       const user = users.find((user) => user.id === userId);
-      user && setUser(user);
+      if (user) {
+        setUser(user);
+      }
     }
   }, [userId]);
 
   return (
     <>
       <h1>User Page</h1>
-      <div className="user-card">
-        <img loading="lazy" alt={user.name} src={user.avatar} />
-        <h1>{user.name}</h1>
-        <p>{user.address}</p>
-      </div>
-      {/* <User user={user} /> */}
+      {user && <User user={user} />}
     </>
   );
 };

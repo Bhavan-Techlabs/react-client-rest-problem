@@ -27,7 +27,7 @@ function UsersList() {
     <>
       <div className="user-list-wrapper">
         {users.map((user) => (
-          <User user={user} />
+          <User key={user.id} user={user} />
         ))}
       </div>
     </>
