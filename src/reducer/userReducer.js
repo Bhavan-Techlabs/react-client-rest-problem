@@ -1,14 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-//TODO: Add initialState
-const initialState = {};
-
 export const counterSlice = createSlice({
-  name: "counter",
-  initialState,
+  name: "users",
+  initialState: {
+    users: [],
+  },
   reducers: {
-    //TODO: Add slice actions
-  }
+    getUser: (state, id) => {
+      const user = state.users.find((user) => user.id === id);
+      console.log(user);
+      return user;
+    },
+    addUsers: (state, users) => {
+      state.users = users.payload;
+    },
+  },
 });
 
+export const { getUser, addUsers } = counterSlice.actions;
 export default counterSlice.reducer;
