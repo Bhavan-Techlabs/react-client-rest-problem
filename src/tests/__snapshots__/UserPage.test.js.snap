@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserForm component renders 1`] = `
+<div
+  className="form-wrapper"
+>
+  <form>
+    <p>
+      <label>
+        Name: 
+      </label>
+      <input
+        name="name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </p>
+    <p>
+      <label>
+        Address: 
+      </label>
+      <input
+        name="address"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Update User
+    </button>
+  </form>
+</div>
+`;
+
+exports[`UserPage component renders 1`] = `
+<div
+  className="user-page-wrapper"
+>
+  <h1>
+    User Page
+  </h1>
+</div>
+`;
